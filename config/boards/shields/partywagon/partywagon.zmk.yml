@@ -1,0 +1,8 @@
+file_format: "1"
+id: partywagon
+name: Party Wagon
+type: shield
+url: https://github.com/petejohanson/partywagon
+requires: [pro_micro]
+features:
+  - keys
