@@ -4,6 +4,6 @@
 if SHIELD_PARTYWAGON
 
 config ZMK_KEYBOARD_NAME
-    default "Party Wagon"
+    default "Partywagon"
 
 endif
