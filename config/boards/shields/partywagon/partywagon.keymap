@@ -61,7 +61,7 @@
             &kp TILDE    &kp N4    &kp N5     &kp N6     &trans        &kp MINUS  &kp PLUS   &kp LARW   &kp UARW   &kp RARW 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ CAPS     │  7       │  8       │  9       │  0       │   │  _       │  =       │          │ DOWN     │          │
-           &caps_word  &kp N7     &kp N8     &kp N9     &kp N0         &kp UNDER  &KP EQUAL  &trans     &kp DARW   &trans
+           &caps_word  &kp N7     &kp N8     &kp N9     &kp N0         &kp UNDER  &kp EQUAL  &trans     &kp DARW   &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
             &trans     &kp LSHFT             &kp LGUI                            &kp SPACE               &trans    &kp ENTER
         //╰──────────┴──────────╯          ╰──────────╯                         ╰──────────╯          ╰──────────┴──────────╯
@@ -89,7 +89,7 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│ RESET    │          │          │          │PROFILE 0 │   │          │          │          │          │  RESET   │
-           &sys_reset  &trans     &trans     &trans    &bt BT_SEL 0    &trans     &trans     &trans     &trans    &sys_reset
+           &sys_reset  &trans     &trans     &trans    &bt BT_SEL 0   &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP  &trans &sys_reset
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│BOOTLOADER│          │          │          │PROFILE 1 │   │          │          │          │          │BOOTLOADER│
           &bootloader  &trans     &trans     &trans    &bt BT_SEL 1    &trans     &trans     &trans     &trans    &bootloader
