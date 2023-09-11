@@ -16,7 +16,7 @@
 		compatible = "zmk,soft-on-off-gpio";
 
 		input-gpios = <&pro_micro 0 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-		wakeup-sources = <>;
+		wakeup-sources = <&kscan0>;
 	};
 
 	default_transform: keymap_transform_0 {
@@ -49,6 +49,7 @@ RC(6,0) RC(6,1)         RC(6,3)                                 RC(7,3)         
 		compatible = "zmk,kscan-gpio-matrix";
 		label = "KSCAN";
 		diode-direction = "col2row";
+		wakeup-source;
 		
 		col-gpios
 			= <&pro_micro 5 GPIO_ACTIVE_HIGH>
