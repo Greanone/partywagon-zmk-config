@@ -12,11 +12,36 @@
 		zmk,matrix_transform = &transform_3u;
 	};
 
-	soft_on_off {
-		compatible = "zmk,soft-on-off-gpio";
+	keys {
+		compatible = "gpio-keys";
+		wakeup_key: wakeup_key {
+			gpios = <&pro_micro 0 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+		};
+	};
 
-		input-gpios = <&pro_micro 0 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-		wakeup-sources = <&kscan0>;
+	behaviors {
+		hw_soft_off: behavior_hw_soft_off {
+			compatible = "zmk,behavior-soft-off";
+			#binding-cells = <0>;
+			label = "HW_SO";
+		};
+	};
+
+	soft_off_behavior_key {
+		compatible = "zmk,behavior-key";
+		bindings = <&hw_soft_off>;
+		key = <&wakeup_key>;
+	};
+
+	wakeup_source: wakeup_source {
+		compatible = "zmk,wakeup-trigger-key";
+		trigger = <&wakeup_key>;
+		wakeup-source;
+	};
+
+	soft_off_wakers {
+		compatible = "zmk,soft-off-wakeup-sources";
+		wakeup-sources = <&wakeup_source>;
 	};
 
 	default_transform: keymap_transform_0 {
