@@ -3,3 +3,4 @@
 
 config SHIELD_PARTYWAGON
     def_bool $(shields_list_contains,partywagon)
+    imply ZMK_PM_SOFT_OFF
